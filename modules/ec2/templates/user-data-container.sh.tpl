@@ -1,7 +1,6 @@
 #!/bin/bash
 apt-get -y update
 apt-get install -y awscli
-apt-get install -y jq
 curl -fsSL https://get.docker.com -o /home/ubuntu/get-docker.sh
 sh /home/ubuntu/get-docker.sh
 usermod -aG docker ubuntu
