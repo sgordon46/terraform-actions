@@ -18,9 +18,6 @@ resource "aws_instance" "default" {
     http_tokens   = "required"
   }
 
-  lifecycle {
-    replace_triggered_by = [template_file.default]
-  }
 }
 
 data "template_file" "default" {

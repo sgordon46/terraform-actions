@@ -40,4 +40,4 @@ jobs:
 
       - name: Terraform Apply
         #if: github.ref == 'refs/head/main' && github.event_name == 'push'
-        run: terraform apply -auto-approve
+        run: terraform apply -auto-approve -replace vm1
