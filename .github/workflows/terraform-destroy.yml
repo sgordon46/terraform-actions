@@ -8,8 +8,9 @@ jobs:
     env:
       AWS_ACCESS_KEY_ID: ${{secrets.AWS_KEY}}
       AWS_SECRET_ACCESS_KEY: ${{secrets.AWS_SECRET}}
-      PRISMA_KEY: ${{secrets.PRISMA_KEY}}
-      PRISMA_SECRET: ${{secrets.PRISMA_SECRET}}
+      TF_VAR_PRISMA_KEY: ${{secrets.PRISMA_KEY}}
+      TF_VAR_PRISMA_SECRET: ${{secrets.PRISMA_SECRET}}
+      TF_VAR_PRISMA_URL: ${{secrets.PRISMA_URL}}
       AWS_REGION: "us-east-1"
 
     steps:
