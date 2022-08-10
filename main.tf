@@ -1,11 +1,15 @@
-provider "aws" {
 
 
-  backend "s3" {
-    bucket = "terraform-state"
+terraform {
+    backend "s3" {
+    bucket = "strategic-east-terraform"
     key = "terraform-actions.tfstate"
     region = "us-east-1"
   }    
+}
+
+provider "aws" {
+
 }
 
 
