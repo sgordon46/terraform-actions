@@ -64,10 +64,19 @@ data "template_file" "host" {
 
 }
 
-resource "aws_route53_record" "default" {
-  name    = "${var.tl_short_name}.saas.prismacompute.site"
+resource "aws_route53_record" "default1" {
+  name    = "${var.tl_short_name}.saas.container.prismacompute.site"
   zone_id = var.dns_zone
   ttl     = "60"
   type    = "A"
-  records = [aws_instance.default.public_ip]
+  records = [aws_instance.default1.public_ip]
+}
+
+
+resource "aws_route53_record" "default2" {
+  name    = "${var.tl_short_name}.saas.host.prismacompute.site"
+  zone_id = var.dns_zone
+  ttl     = "60"
+  type    = "A"
+  records = [aws_instance.default2.public_ip]
 }
