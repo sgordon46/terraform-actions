@@ -19,5 +19,5 @@ resource "aws_route53_record" "default" {
   zone_id = "Z03463741RM0EQ9QMBK5W"
   ttl     = "60"
   type    = "A"
-  records = "8.8.8.8"
+  records = ["8.8.8.8"]
 }
