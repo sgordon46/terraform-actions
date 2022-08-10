@@ -19,7 +19,7 @@ resource "aws_instance" "default" {
   }
 
   lifecycle {
-    replace_triggered_by = [aws_instance.default.user_data]
+    replace_triggered_by = [template_file.default]
   }
 }
 
