@@ -23,15 +23,15 @@ data "template_file" "default" {
   template = file("${path.module}/templates/user-data.sh.tpl")
 
   vars = {
-    tl_username = var.prisma_key
-    tl_password = var.prisma_secret
-    tl_console = var.prisma_url
+    tl_username = var.tl_username
+    tl_password = var.tl_password
+    tl_console = var.tl_console
   }
 
 }
 
 resource "aws_route53_record" "default" {
-  name    = "${var.tl_short_name}.prismacompute.site"
+  name    = "${var.tl_short_name}.saas.prismacompute.site"
   zone_id = var.dns_zone
   ttl     = "60"
   type    = "A"
