@@ -23,4 +23,9 @@ export TOKEN=$(curl -s -k -H "Content-Type: application/json" -d "$(generate_pos
 
 echo "TOKEN: $TOKEN"
 
-curl -sSL  --header "authorization: Bearer $${TOKEN}" -X POST ${tl_console}/api/v1/scripts/defender.sh  | sudo bash -s -- -c "us-west1.cloud.twistlock.com" -d "none" -v -m  
+curl -sSL  --header "authorization: Bearer $${TOKEN}" -X POST ${tl_console}/api/v1/scripts/defender.sh -o defender.sh
+
+pwd
+ls - l 
+
+sudo ./defender.sh -s -- -c "us-west1.cloud.twistlock.com" -d "none" -v -m  
