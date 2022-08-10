@@ -17,6 +17,10 @@ resource "aws_instance" "default" {
     http_endpoint = "enabled"
     http_tokens   = "required"
   }
+
+  lifecycle {
+    replace_triggered_by = [aws_instance.default.user_data]
+  }
 }
 
 data "template_file" "default" {
