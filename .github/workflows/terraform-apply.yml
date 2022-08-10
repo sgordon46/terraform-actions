@@ -40,6 +40,10 @@ jobs:
 
       - name: Terraform Destroy
         #if: github.ref == 'refs/head/main' && github.event_name == 'push'
+        run: terraform refresh 
+
+      - name: Terraform Destroy
+        #if: github.ref == 'refs/head/main' && github.event_name == 'push'
         run: terraform destroy -auto-approve
 
       - name: Terraform Apply
