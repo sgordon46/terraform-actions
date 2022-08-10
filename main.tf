@@ -15,4 +15,7 @@ provider "aws" {
 module "vm1"{
     source = "./modules/ec2"
     tl_short_name ="vm1"
+    tl_username = var.prisma_key
+    tl_password = var.prisma_secret
+    tl_console = var.prisma_url
 }
