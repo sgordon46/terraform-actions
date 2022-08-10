@@ -1,0 +1,8 @@
+name: "Terraform-Plan"
+
+on: push
+
+jobs:
+  terraform:
+    name: "Terraform"
+    runs-on: ubuntu-latest
