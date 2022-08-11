@@ -6,7 +6,9 @@ resource "aws_instance" "default" {
   vpc_security_group_ids = [aws_security_group.default.id]
   key_name               = "sgordon-aws-pan-lab"
   tags = {
-    Name = "SaaS Host - ${var.tl_short_name}"
+    Name = "SaaS Host - ${var.tl_short_name}",
+    ENV = "DEV"
+
   }
   user_data = data.template_file.default.rendered
   root_block_device {

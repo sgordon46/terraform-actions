@@ -27,4 +27,4 @@ chmod u+x defender.sh
 pwd
 ls -l 
 
-sudo ./defender.sh -s -- -c "us-west1.cloud.twistlock.com" -d "none" -v -m  
+sudo ./defender.sh -s -- -c "us-west1.cloud.twistlock.com" -d "none" -v -m  -u
