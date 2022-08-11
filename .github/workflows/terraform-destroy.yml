@@ -1,8 +1,9 @@
 name: Terraform-Destroy
 on: 
-  workflow_dispatch:
   schedule:
     - cron: '05 22 * * *'
+  
+
 
 jobs:
   terraform:
