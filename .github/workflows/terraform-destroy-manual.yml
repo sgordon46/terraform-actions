@@ -1,13 +1,10 @@
-name: Terraform-Destroy
-on: 
-  schedule:
-    - cron: '05 22 * * *'
-  
-
+name: Terraform-Destroy-Manual
+on: workflow_dispatch
+ 
 
 jobs:
   terraform:
-    name: "Terraform"
+    name: "Terraform Destroy"
     runs-on: ubuntu-latest
     env:
       AWS_ACCESS_KEY_ID: ${{secrets.AWS_KEY}}
@@ -27,16 +24,6 @@ jobs:
       - name: Terraform Init
         id: init
         run: terraform init
-
-      # - name: Terraform Plan
-      #   id: plan
-      #   if: github.event_name == 'push'
-      #   run: terraform plan -no-color
-      #   continue-on-error: true
-
-      # - name: Terraform Plan Status
-      #   if: steps.plan.outcome == 'failure'
-      #   run: exit 1
 
       - name: Terraform Destroy
         #if: github.ref == 'refs/head/main' && github.event_name == 'push'
