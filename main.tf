@@ -13,7 +13,7 @@ provider "aws" {
 }
 
 module "vm1"{
-    count=6
+    count=var.count-of_each
     source = "./modules/ec2-container"
     tl_short_name ="vm.${count.index}"
     tl_username = var.prisma_key

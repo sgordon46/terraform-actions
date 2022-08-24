@@ -10,7 +10,10 @@ variable "prisma_secret" {
 variable "prisma_url" {
    type = string
 }
-
+variable "count-of_each" {
+   type = number
+   default=4
+}
 
 
 
