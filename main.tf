@@ -22,7 +22,7 @@ module "vm1"{
 }
 
 module "vm2"{
-    count=6
+    count=var.count-of_each
     source = "./modules/ec2-host"
     tl_short_name ="vm2.${count.index}"
     tl_username = var.prisma_key
