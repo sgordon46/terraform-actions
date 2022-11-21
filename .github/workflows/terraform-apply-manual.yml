@@ -26,7 +26,7 @@ jobs:
         with:
           api-key: ${{ secrets.BC_API_KEY }}
           irectory: '.'
-          soft_fail: true
+          soft_fail: false
 
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v2
