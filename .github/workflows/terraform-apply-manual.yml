@@ -18,13 +18,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Run Bridgecrew 
-        id: Bridgecrew
-        uses: bridgecrewio/bridgecrew-action@master 
+      - name: Run checkov scan 
+        id: checkov
+        uses: bridgecrewio/checkov-action@master 
         env:
           PRISMA_API_URL: https://api4.prismacloud.io
         with:
           api-key: ${{ secrets.BC_API_KEY }}
+          irectory: '.'
+          soft_fail: true
 
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v2
