@@ -27,18 +27,17 @@ jobs:
           api-key: ${{ secrets.BC_API_KEY }}
           directory: '.'
           soft_fail: false
-          continue-on-error: true
 
       - name: Expose report
+        if: always()
         uses: actions/upload-artifact@v2
         with:
           name: SARIF results
           path: results.sarif
-
       - uses: github/codeql-action/upload-sarif@v1
         with:
           # Path to SARIF file relative to the root of the repository
-          sarif_file: results.sarif
+          sarif_file: results.sariff
 
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v2
