@@ -28,7 +28,7 @@ jobs:
         with:
           api-key: ${{ secrets.BC_API_KEY }}
           directory: '.'
-          soft_fail: false
+          soft_fail: true
 
       - name: Expose report
         uses: actions/upload-artifact@v2
