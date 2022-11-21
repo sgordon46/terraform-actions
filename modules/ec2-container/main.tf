@@ -18,6 +18,7 @@ resource "aws_instance" "default" {
     http_endpoint = "enabled"
     http_tokens   = "required"
   }
+  associate_public_ip_address = true
 
 }
 
