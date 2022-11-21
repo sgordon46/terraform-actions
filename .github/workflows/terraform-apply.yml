@@ -24,13 +24,14 @@ jobs:
       - name: Run checkov scan 
         id: checkov
         uses: bridgecrewio/checkov-action@master 
+        continue-on-error: true
         env:
           PRISMA_API_URL: https://api4.prismacloud.io
         with:
           api-key: ${{ secrets.BC_API_KEY }}
           directory: '.'
           soft_fail: false
-          continue-on-error: true
+
 
 
       - name: Expose report
