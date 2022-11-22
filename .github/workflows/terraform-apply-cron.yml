@@ -28,7 +28,7 @@ jobs:
         with:
           api-key: ${{ secrets.BC_API_KEY }}
           directory: '.'
-          soft_fail: false
+          soft_fail: true
 
       - name: Expose report
         if: always()
@@ -36,7 +36,7 @@ jobs:
         with:
           name: SARIF results
           path: results.sarif
-          
+
       - uses: github/codeql-action/upload-sarif@v1
         if: always()
         with:
