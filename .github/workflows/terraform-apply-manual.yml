@@ -28,18 +28,18 @@ jobs:
           directory: '.'
           soft_fail: true
 
-      - name: Expose report
-        if: always()
-        uses: actions/upload-artifact@v2
-        with:
-          name: SARIF results
-          path: results.sarif
+      # - name: Expose report
+      #   if: always()
+      #   uses: actions/upload-artifact@v2
+      #   with:
+      #     name: SARIF results
+      #     path: results.sarif
 
-      - uses: github/codeql-action/upload-sarif@v1
-        if: always()
-        with:
-          # Path to SARIF file relative to the root of the repository
-          sarif_file: results.sariff
+      # - uses: github/codeql-action/upload-sarif@v1
+      #   if: always()
+      #   with:
+      #     # Path to SARIF file relative to the root of the repository
+      #     sarif_file: results.sariff
 
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v2
