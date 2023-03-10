@@ -1,4 +1,4 @@
-name: "Terraform-Apply-Manual"
+name: "Terraform-Rebuild"
 
 on: workflow_dispatch
 
