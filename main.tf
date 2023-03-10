@@ -36,15 +36,7 @@ provider "google" {
 }
 
 
-module "vm-primary"{
-    count=var.count-of_each-gcp
-    source = "./modules/gcp-instance"
-    project = "sgordon-primary"
-    name = "vm-${count.index}"
-    tl_username = var.prisma_key
-    tl_password = var.prisma_secret
-    tl_console = var.prisma_url
-}
+
 
 module "vm-project1"{
     count=var.count-of_each-gcp
@@ -66,4 +58,14 @@ module "vm-project2"{
     tl_password = var.prisma_secret
     tl_console = var.prisma_url
 
+}
+
+module "vm-project3"{
+    count=var.count-of_each-gcp
+    source = "./modules/gcp-instance"
+    project = "project-3-370416"
+    name = "vm-${count.index}"
+    tl_username = var.prisma_key
+    tl_password = var.prisma_secret
+    tl_console = var.prisma_url
 }
