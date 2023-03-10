@@ -28,8 +28,8 @@ resource "google_compute_instance" "vm_instance" {
 
   metadata_startup_script = data.template_file.default.rendered
 
-  label {
-      type =  prod     
+  labels = {
+    environment = "dev"
   }
 
   tags = ["foo", "bar"]
