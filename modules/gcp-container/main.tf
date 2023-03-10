@@ -32,9 +32,8 @@ resource "google_compute_instance" "vm_instance" {
       label =  "true"     
   }
 
-  tags {
-      tags =  "true"     
-  }
+  tags = ["foo", "bar"]
+
 
   boot_disk {
     initialize_params {
