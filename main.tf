@@ -29,3 +29,32 @@ module "vm2"{
     tl_password = var.prisma_secret
     tl_console = var.prisma_url
 }
+
+provider "google" {
+  region = "us-central1"
+  zone    = "us-central1-a"
+}
+
+
+module "vm-primary"{
+    count=var.count-of_each
+    source = "./modules/gcp-instance"
+    project = "sgordon-primary"
+    name = "vm-${count.index}"
+}
+
+module "vm-project1"{
+    count=var.count-of_each
+    source = "./modules/gcp-instance"
+    project = "project1-366201"
+    name = "vm-${count.index}"
+
+}
+
+module "vm-project2"{
+    count=var.count-of_each
+    source = "./modules/gcp-instance"
+    project = "project2-366201"
+    name = "vm-${count.index}"
+
+}

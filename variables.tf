@@ -15,5 +15,8 @@ variable "count-of_each" {
    default=4
 }
 
-
+variable "count-of_each" {
+   type = number
+   default=4
+}
 

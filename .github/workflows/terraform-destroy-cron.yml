@@ -16,6 +16,7 @@ jobs:
       TF_VAR_prisma_secret: ${{secrets.PRISMA_SECRET}}
       TF_VAR_prisma_url: ${{secrets.PRISMA_URL}}
       AWS_REGION: "us-east-1"
+      GOOGLE_CREDENTIALS: ${{secrets.GOOGLE_APPLICATION_CREDENTIALS}}
 
     steps:
       - name: Checkout
