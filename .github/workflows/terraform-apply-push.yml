@@ -1,4 +1,4 @@
-name: "Terraform-Apply"
+name: "Terraform-Apply-Push"
 
 # on:
 #   push:
