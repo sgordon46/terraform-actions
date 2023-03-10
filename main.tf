@@ -40,7 +40,7 @@ module "vm-project1-h"{
     count=var.count-of_each-gcp
     source = "./modules/gcp-host"
     project = "project1-366201"
-    name = "vm-${count.index}"
+    name = "vm-host-${count.index}"
     tl_username = var.prisma_key
     tl_password = var.prisma_secret
     tl_console = var.prisma_url
@@ -51,7 +51,7 @@ module "vm-project2-h"{
     count=var.count-of_each-gcp
     source = "./modules/gcp-host"
     project = "project2-366201"
-    name = "vm-${count.index}"
+    name = "vm-host-${count.index}"
     tl_username = var.prisma_key
     tl_password = var.prisma_secret
     tl_console = var.prisma_url
@@ -61,7 +61,7 @@ module "vm-project3-h"{
     count=var.count-of_each-gcp
     source = "./modules/gcp-host"
     project = "project-3-370416"
-    name = "vm-${count.index}"
+    name = "vm-host-${count.index}"
     tl_username = var.prisma_key
     tl_password = var.prisma_secret
     tl_console = var.prisma_url
@@ -71,7 +71,7 @@ module "vm-project1-c"{
     count=var.count-of_each-gcp
     source = "./modules/gcp-container"
     project = "project1-366201"
-    name = "vm-${count.index}"
+    name = "vm-container-${count.index}"
     tl_username = var.prisma_key
     tl_password = var.prisma_secret
     tl_console = var.prisma_url
@@ -82,7 +82,7 @@ module "vm-project2-c"{
     count=var.count-of_each-gcp
     source = "./modules/gcp-container"
     project = "project2-366201"
-    name = "vm-${count.index}"
+    name = "vm-container-${count.index}"
     tl_username = var.prisma_key
     tl_password = var.prisma_secret
     tl_console = var.prisma_url
@@ -92,7 +92,7 @@ module "vm-project3-c"{
     count=var.count-of_each-gcp
     source = "./modules/gcp-container"
     project = "project-3-370416"
-    name = "vm-${count.index}"
+    name = "vm-container-${count.index}"
     tl_username = var.prisma_key
     tl_password = var.prisma_secret
     tl_console = var.prisma_url
