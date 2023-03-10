@@ -34,6 +34,12 @@ resource "google_compute_instance" "vm_instance" {
     }
   }
 
+
+  labels = {
+    environment = "dev",
+    type = "host"
+  }
+
   network_interface {
     # A default network is created for all GCP projects
     network = "default"
