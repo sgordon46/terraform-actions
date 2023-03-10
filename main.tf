@@ -13,7 +13,7 @@ provider "aws" {
 }
 
 module "vm1"{
-    count=var.count-of_each
+    count=var.count-of_each-aws
     source = "./modules/ec2-container"
     tl_short_name ="vm.${count.index}"
     tl_username = var.prisma_key
@@ -22,7 +22,7 @@ module "vm1"{
 }
 
 module "vm2"{
-    count=var.count-of_each
+    count=var.count-of_each-aws
     source = "./modules/ec2-host"
     tl_short_name ="vm2.${count.index}"
     tl_username = var.prisma_key
@@ -37,14 +37,14 @@ provider "google" {
 
 
 module "vm-primary"{
-    count=var.count-of_each
+    count=var.count-of_each-gcp
     source = "./modules/gcp-instance"
     project = "sgordon-primary"
     name = "vm-${count.index}"
 }
 
 module "vm-project1"{
-    count=var.count-of_each
+    count=var.count-of_each-gcp
     source = "./modules/gcp-instance"
     project = "project1-366201"
     name = "vm-${count.index}"
@@ -52,7 +52,7 @@ module "vm-project1"{
 }
 
 module "vm-project2"{
-    count=var.count-of_each
+    count=var.count-of_each-gcp
     source = "./modules/gcp-instance"
     project = "project2-366201"
     name = "vm-${count.index}"

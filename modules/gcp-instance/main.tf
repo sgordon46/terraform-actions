@@ -9,11 +9,24 @@ resource "random_shuffle" "images" {
   result_count = 1
 }
 
+data "template_file" "default" {
+  template = file("${path.module}/templates/user-data.sh.tpl")
+
+  vars = {
+    tl_username = var.tl_username
+    tl_password = var.tl_password
+    tl_console = var.tl_console
+  }
+
+}
+
 resource "google_compute_instance" "vm_instance" {
   name = "${var.name}-${var.project}"
   machine_type = "e2-small"
   project = var.project
   zone = random_shuffle.zones.result[0]
+
+  metadata_startup_script = data.template_file.default.rendered
 
   boot_disk {
     initialize_params {
