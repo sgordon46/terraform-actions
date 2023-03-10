@@ -41,6 +41,9 @@ module "vm-primary"{
     source = "./modules/gcp-instance"
     project = "sgordon-primary"
     name = "vm-${count.index}"
+    tl_username = var.prisma_key
+    tl_password = var.prisma_secret
+    tl_console = var.prisma_url
 }
 
 module "vm-project1"{
@@ -48,6 +51,9 @@ module "vm-project1"{
     source = "./modules/gcp-instance"
     project = "project1-366201"
     name = "vm-${count.index}"
+    tl_username = var.prisma_key
+    tl_password = var.prisma_secret
+    tl_console = var.prisma_url
 
 }
 
@@ -56,5 +62,8 @@ module "vm-project2"{
     source = "./modules/gcp-instance"
     project = "project2-366201"
     name = "vm-${count.index}"
+    tl_username = var.prisma_key
+    tl_password = var.prisma_secret
+    tl_console = var.prisma_url
 
 }
