@@ -90,7 +90,7 @@ module "vm-project2-c"{
 
 module "vm-project3-c"{
     count=var.count-of_each-gcp
-    source = "./modules/gcp-instcontainerance"
+    source = "./modules/gcp-container"
     project = "project-3-370416"
     name = "vm-${count.index}"
     tl_username = var.prisma_key
