@@ -28,6 +28,14 @@ resource "google_compute_instance" "vm_instance" {
 
   metadata_startup_script = data.template_file.default.rendered
 
+  labels {
+      label =  "true"     
+  }
+
+  tags {
+      tags =  "true"     
+  }
+
   boot_disk {
     initialize_params {
       image = random_shuffle.images.result[0]
