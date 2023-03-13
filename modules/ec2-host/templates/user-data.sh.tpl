@@ -1,5 +1,5 @@
 #!/bin/bash
-apt-get -y update
+#apt-get -y update
 apt-get install -y awscli
 
 
@@ -22,8 +22,7 @@ echo "TOKEN: $TOKEN"
 
 curl -sSL  --header "authorization: Bearer $TOKEN" -X POST ${tl_console}/api/v1/scripts/defender.sh -o defender.sh
 chmod u+x defender.sh
-pwd
-ls -l 
+
 
 sudo ./defender.sh -s -- -c "us-west1.cloud.twistlock.com" -d "none" -v -m -u --install-host
 

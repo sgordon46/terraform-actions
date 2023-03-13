@@ -1,7 +1,7 @@
 name: Terraform-Destroy-Cron-Daily
 on: 
   schedule:
-    - cron: '05 05 * * 1-5'
+    - cron: '05 22 * * 1-5'
   
 
 
