@@ -18,7 +18,7 @@ variable "count-of_each-aws" {
 
 variable "count-of_each-gcp" {
    type = number
-   default=2
+   default=1
 }
 
 
