@@ -1,8 +1,10 @@
 name: "Terraform-Apply-Cron"
 
-on: 
-  schedule:
-    - cron: '05 13 * * 1-5'
+on: workflow_dispatch
+
+# on: 
+#   schedule:
+#     - cron: '05 13 * * 1-5'
 
 jobs:
   terraform:
