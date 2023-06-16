@@ -1,7 +1,7 @@
 
 resource "random_shuffle" "zones" {
   #input        = ["us-east1-b","us-east1-c","us-east1-d","us-east4-c","us-east4-b","us-east4-a","us-central1-c","us-central1-a","us-central1-f","us-central1-b","us-west1-b","us-west1-c","us-west1-a","us-east5-a","us-east5-b","us-east5-c","us-south1-a","us-south1-b","us-south1-c","us-west2-a","us-west2-b","us-west2-c","us-west3-a","us-west3-b","us-west3-c","us-west4-a","us-west4-b","us-west4-c"]
-  input        = ["us-east1-a","us-east1-b","us-east1-c","us-east1-d","us-central1-c","us-central1-a","us-central1-d","us-central1-b"]
+  input        = ["us-east1-b","us-east1-c","us-east1-d","us-central1-c","us-central1-a","us-central1-b"]
   result_count = 1
 }
 
