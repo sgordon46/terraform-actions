@@ -12,23 +12,23 @@ provider "aws" {
 
 }
 
-module "vm1"{
-    count=var.count-of_each-aws
-    source = "./modules/ec2-container"
-    tl_short_name ="vm.${count.index}"
-    tl_username = var.prisma_key
-    tl_password = var.prisma_secret
-    tl_console = var.prisma_url
-}
+# module "vm1"{
+#     count=var.count-of_each-aws
+#     source = "./modules/ec2-container"
+#     tl_short_name ="vm.${count.index}"
+#     tl_username = var.prisma_key
+#     tl_password = var.prisma_secret
+#     tl_console = var.prisma_url
+# }
 
-module "vm2"{
-    count=var.count-of_each-aws
-    source = "./modules/ec2-host"
-    tl_short_name ="vm2.${count.index}"
-    tl_username = var.prisma_key
-    tl_password = var.prisma_secret
-    tl_console = var.prisma_url
-}
+# module "vm2"{
+#     count=var.count-of_each-aws
+#     source = "./modules/ec2-host"
+#     tl_short_name ="vm2.${count.index}"
+#     tl_username = var.prisma_key
+#     tl_password = var.prisma_secret
+#     tl_console = var.prisma_url
+# }
 
 provider "google" {
   region = "us-central1"
