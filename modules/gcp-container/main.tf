@@ -7,7 +7,7 @@ resource "random_shuffle" "zones" {
 
 resource "random_shuffle" "images" {
   #input        = ["centos-cloud/centos-stream-8","centos-cloud/centos-stream-9","debian-cloud/debian-10","debian-cloud/debian-11-arm64","debian-cloud/debian-11","ubuntu-os-cloud/ubuntu-1804-lts-arm64","ubuntu-os-cloud/ubuntu-1804-lts","ubuntu-os-cloud/ubuntu-2004-lts-arm64","ubuntu-os-cloud/ubuntu-2004-lts","ubuntu-os-cloud/ubuntu-2204-lts-arm64","ubuntu-os-cloud/ubuntu-2204-lts","ubuntu-os-cloud/ubuntu-2210-arm64","ubuntu-os-cloud/ubuntu-minimal-1804-lts-arm64","ubuntu-os-cloud/ubuntu-minimal-1804-lts","ubuntu-os-cloud/ubuntu-minimal-2004-lts-arm64","ubuntu-os-cloud/ubuntu-minimal-2004-lts","ubuntu-os-cloud/ubuntu-minimal-2204-lts-arm64","ubuntu-os-cloud/ubuntu-minimal-2204-lts","ubuntu-os-cloud/ubuntu-minimal-2210-amd64","ubuntu-os-cloud/ubuntu-minimal-2210-arm64"]
-  input        = ["debian-cloud/debian-10","debian-cloud/debian-11","ubuntu-os-cloud/ubuntu-1804-lts","ubuntu-os-cloud/ubuntu-2004-lts","ubuntu-os-cloud/ubuntu-2204-lts","ubuntu-os-cloud/ubuntu-2210-arm64"]
+  input        = ["debian-cloud/debian-11"]
   result_count = 1
 }
 
