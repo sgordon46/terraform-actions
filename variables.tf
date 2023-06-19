@@ -13,12 +13,12 @@ variable "prisma_url" {
 
 variable "count-of_each-aws" {
    type = number
-   default=4
+   default=2
 }
 
 variable "count-of_each-gcp" {
    type = number
-   default=2
+   default=1
 }
 
 

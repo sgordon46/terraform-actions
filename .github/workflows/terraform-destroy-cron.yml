@@ -1,11 +1,11 @@
 name: Terraform-Destroy-Cron-Daily
 
 
-on: workflow_dispatch
+#on: workflow_dispatch
 
-# on: 
-#   schedule:
-#     - cron: '05 22 * * 1-5'
+on: 
+  schedule:
+    - cron: '05 22 * * 1-5'
   
 
 jobs:
