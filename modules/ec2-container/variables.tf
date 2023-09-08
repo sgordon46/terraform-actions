@@ -18,7 +18,7 @@ variable "instance-type" {
 
 variable "ami" {
    type = string
-   default = "ami-052efd3df9dad4825" #"ami-0885b1f6bd170450c"
+   default = "ami-0a0c8eebcdd6dcbd0" #"ami-052efd3df9dad4825" #"ami-0885b1f6bd170450c"
    description = "AWS AMI id"  
 }
 
