@@ -25,7 +25,7 @@ curl -sSL  --header "authorization: Bearer $TOKEN" -X POST ${tl_console}/api/v1/
 chmod u+x defender.sh
 
 
-#sudo ./defender.sh -s -- -c "us-west1.cloud.twistlock.com" -d "none" -v -m -u 
+sudo ./defender.sh -s -- -c "us-west1.cloud.twistlock.com" -d "none" -v -m -u 
 
 #'AKIAZZZZZZZZZZZZZZZZ'
 #'AKIAJSIE27KKMHXI3BJQ'
