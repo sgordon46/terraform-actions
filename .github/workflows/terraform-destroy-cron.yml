@@ -6,6 +6,7 @@ name: Terraform-Destroy-Cron-Daily
 on: 
   schedule:
     - cron: '05 22 * * 1-5'
+  workflow_dispatch:
   
 
 jobs:
