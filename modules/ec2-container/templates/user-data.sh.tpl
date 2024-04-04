@@ -34,3 +34,4 @@ sudo ./defender.sh -s -- -c "app0.cloud.twistlock.com" -d "none" -v -m  -u
 
 sudo echo "AKIAZZZZZZZZZZZZZZZZ" >> /opt/secrets
 sudo echo "AKIAJSIE27KKMHXI3BJQ" >> /opt/secrets
+sudo echo "AKIAJSIE27K25HXI3BJQ" >> /opt/secrets
